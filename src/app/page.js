@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import ThemeToggle from "@/components/common/ThemeToggle";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -103,7 +104,6 @@ export default function Home() {
                   {/* Social links with hover effects */}
                   {[
                     { icon: Github, url: "https://github.com/manojgohel" },
-                    { icon: Linkedin, url: "https://linkedin.com/in/manojgohel" },
                     { icon: Twitter, url: "https://twitter.com/manojgohel" }
                   ].map((social, i) => (
                     <Button
@@ -118,6 +118,7 @@ export default function Home() {
                       </Link>
                     </Button>
                   ))}
+                  <ThemeToggle />
                 </motion.div>
               </motion.div>
             </div>
